@@ -1,0 +1,12 @@
+
+# Install Azure CLI
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+# Update Bicep
+az bicep install && az bicep upgrade
+
+az login
+az account show
+az account set --subscription MPN150
+az group create --location switzerlandnorth --name 'rg-upload'
+az deployment group what-if --template-file main.bicep --resource-group 'rg-upload'
+az deployment group create --template-file main.bicep --resource-group 'rg-upload'
