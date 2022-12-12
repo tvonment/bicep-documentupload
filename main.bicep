@@ -3,7 +3,6 @@ param prefix string = 'docup'
 param storageAccountName string = '${prefix}${uniqueString(resourceGroup().id)}'
 param logworkspaceName string = '${prefix}-loganalytics-${uniqueString(resourceGroup().id)}'
 param insightsName string = '${prefix}-appinsights-${uniqueString(resourceGroup().id)}'
-
 param hostingPlanName string = '${prefix}-appservices-plan'
 param angularAppName string = '${prefix}-angular-${uniqueString(resourceGroup().id)}'
 param jsfunctionsAppName string = '${prefix}-jsfunctions-${uniqueString(resourceGroup().id)}'
